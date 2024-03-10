@@ -1,4 +1,4 @@
-modded class Msp_SoloLocker_Black
+modded class Msp_Openable_Base
 {
       //how many nails per day will it consume | it needs to be higher than 0 to decay (optimization to prevent it from unnecessarily decaying all items)
     override float GetCostToUpkeep()

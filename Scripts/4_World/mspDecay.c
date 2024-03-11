@@ -1,3 +1,5 @@
+#ifdef MuchStuffPack
+
 modded class Msp_Openable_Base
 {
       //how many nails per day will it consume | it needs to be higher than 0 to decay (optimization to prevent it from unnecessarily decaying all items)
@@ -110,3 +112,5 @@ modded class Msp_InventoryStorage_Base
         return 24.0 * 60.0 * 60.0;
     }
 };
+
+#endif

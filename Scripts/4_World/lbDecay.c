@@ -1,4 +1,4 @@
-#ifdef LBmaster_Core
+#ifdef LBmaster_Garage
 
 modded class Garage_Sign_Player
 {
@@ -28,7 +28,47 @@ modded class Garage_Sign_Player_2
         return 24.0 * 60.0 * 60.0;
     }
 };
+
+#endif
+#ifdef LBmaster_SpawnsystemLite
+
 modded class LBS_SleepingBag_Base
+{
+      //how many nails per day will it consume | it needs to be higher than 0 to decay (optimization to prevent it from unnecessarily decaying all items)
+    override float GetCostToUpkeep()
+    {
+        return 0.00001;
+    }
+
+    // time until it decays full in seconds | default is 24 hours
+    override float GetTimeToDecay()
+    {
+        return 24.0 * 60.0 * 60.0;
+    }
+};
+
+#endif
+#ifdef LBmaster_SkinSystem
+
+modded class Repaint_Workbench
+{
+      //how many nails per day will it consume | it needs to be higher than 0 to decay (optimization to prevent it from unnecessarily decaying all items)
+    override float GetCostToUpkeep()
+    {
+        return 0.00001;
+    }
+
+    // time until it decays full in seconds | default is 24 hours
+    override float GetTimeToDecay()
+    {
+        return 24.0 * 60.0 * 60.0;
+    }
+};
+
+#endif
+#ifdef LBmaster_UtilityWorkbenches
+
+modded class Repair_Workbench
 {
       //how many nails per day will it consume | it needs to be higher than 0 to decay (optimization to prevent it from unnecessarily decaying all items)
     override float GetCostToUpkeep()
